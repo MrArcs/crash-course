@@ -8,6 +8,9 @@
   <title>Walmart | Save Money. Live better.</title>
   <link rel="stylesheet" href="main.css">
   <link rel="icon" href="wal-icon.png">
+
+  <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+
 </head>
 <body>
   <header class="header-wrapper">
@@ -15,6 +18,7 @@
       <div>
         <img src="walmartLogo.svg" alt="walmartLogo">
         <!-- <h1 class="brand-logo">Walmart</h1> -->
+        <!-- <i class="lni lni-vercel logo"></i> -->
       </div>
      
     <div class="header-search">
@@ -31,15 +35,28 @@
     </div>
   
       <div class="call-to-action">
-        <div>
-          <a class="cta-button" href="">My Items</a>
+        <a class="cta-button" href="">
+          <i class="lni lni-heart"></i>
+          <div>
+          <span>Reorder</span>
+          <p>My Items</p>
         </div>
-        <div>
-        <a class="cta-button" href=""> account</a>
+        </a>
+
+        <a class="cta-button" href="">
+          <i class="lni lni-user"></i>
+          <div>
+          <span>Sign In</span>
+          <p>Account</p>
         </div>
-        <div>
-          <a class="cta-button" href="">Cart</a>
-         </div>
+        </a>
+
+        <a class="cta-button cart-button" href="">
+          <span class="cart-count">2</span>
+          <i class="lni lni-shopping-basket"></i>
+          <p>$0.00</p>
+        </a>
+        
       </div>
     </div>
 
@@ -54,5 +71,12 @@
       </ul>    
     </nav>
   </header>
+
+
+
+
+
+
+
 </body>
 </html>

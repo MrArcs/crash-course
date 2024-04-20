@@ -17,6 +17,11 @@ a {
   color: #fff;
   font-size: 20px;
 } */
+
+.logo{
+  color: #ffc220 !important;
+  font-size: 40px !important;
+}
 .header-wrapper{
   background-color: #0071dc;
   padding: 15px 0px;
@@ -46,7 +51,7 @@ a {
 
 .call-to-action{
   display: flex;
-  gap: 10px;  
+  gap: 5px;  
 }
 .cta-button {
   color: #fff;
@@ -92,4 +97,71 @@ a {
 }
 .navigation-items ul li a{
   font-weight: bold;
+}
+
+.cart-button{
+  flex-direction: column;
+  gap: 0 !important;
+}
+.cart-button i {
+  font-size: 30px !important;
+}
+.cart-button p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.cart-count{
+  background-color: #ffc220;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  right: 40px;
+  border: 2px solid #e80c0c; 
+}
+.cta-button{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 130px;
+  height: 60px;
+  border-radius: 50px;
+}
+.cta-button i {
+  font-size: 20px !important;
+  color: #ffc220 !important;
+}
+.cta-button div p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cta-button div span {
+  margin: 0;
+  font-size: 12px;
+}
+
+
+
+
+
+
+
+.test{
+  display: grid;
+  justify-content: center;
+  height: 500px;
+  margin: 50px 100px;
+}
+
+.shape{
+  background-color: #ffc220;
+  border: 5px solid #0071dc;
+
 }
