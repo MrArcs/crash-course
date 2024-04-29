@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;500;900;1,100..900&display=swap');
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(220, 220, 220);
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  font-family: "Montserrat";
+  font-weight: 500;
+}
+
+
+.dropdown{
+  position: relative;
+  display: inline;
+  cursor: pointer;
+}
+.dropdown a.dropbtn::after{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: '\f0d7';
+  float:right
+}
+
+.dropdown .dropbtn{
+  background-color: black;
+  color: aliceblue;
+  font-size: 13px;
+  padding: 10px 10px;
+  font-weight: normal;
+  width: 250px;
+  display: block;
+}
+
+
+.dropdown-content{
+  position: absolute;
+  background-color: black;
+  min-width: 250px;
+  padding: 12px 16px;
+  z-index: 1;
+  display: none;
+}
+
+
+.dropdown-content a{
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin: 10px 0;
+  font-size: 13px;
+}
+
+.dropdown-content a::before{
+  font-family: "Font Awesome 5 Free";
+  content: '\f35a';
+  margin-right: 10px;
+}
+
+.dropdown:hover .dropdown-content{
+  display: block;
+}
