@@ -1,0 +1,41 @@
+body{
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+.gallery{
+  max-width: 720px;
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.gallery-card{
+  flex: 1;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  cursor: pointer;
+  background: #000;
+  transition: flex 0.35s ease-in-out;  
+}
+
+.gallery-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.35s ease; 
+}
+
+/* Magic */
+.gallery-card:hover{
+  flex: 3
+}
+
+.gallery:has(.gallery-card:hover)
+.gallery-card:not(:hover) img{
+  filter: blur(3px);
+  opacity: 1;
+}
+
