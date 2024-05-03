@@ -1,0 +1,237 @@
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+/* make images easier to work with */
+img,
+picutre {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Define Design System */
+
+:root {
+  --color-primary: #883ae1;
+  --color-black: #7d7aff;
+  --color-white: #fff;
+  --color-secondary: #f9f9f9;
+  --color-success: #33f541;
+  --color-warming: #fcd613;
+
+  --ff: "Courier New", Courier, monospace;
+  --ff-secondry: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+
+  --spacer: 1rem;
+}
+
+/* Define Design System */
+
+/* locally available for button only */
+.button {
+  --color-primary: #fa3a9b;
+}
+
+/* custom css */
+main {
+  display: grid;
+  height: 100vh;
+  background-color: var(--color-secondary, #f00);
+  place-content: center;
+}
+
+.button-one {
+  background-color: var(--color-black);
+  height: 60px;
+  width: 350px;
+  font-family: var(--ff-secondry, "Courier New", Courier, monospace);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-primary);
+  border-radius: 175px;
+  cursor: pointer;
+}
+.button-outline {
+  background-color: var(--color-white);
+  height: 60px;
+  width: 350px;
+  font-family: var(--ff);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-black);
+  border-radius: 175px;
+  cursor: pointer;
+  border: 1px solid var(--color-black);
+  margin-top: var(--spacer);
+}
+.button-two {
+  background-color: var(--color-white);
+  height: 60px;
+  width: 60px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-black);
+  border-radius: 30px;
+  border: 1px solid var(--color-black);
+  margin: 10px 0;
+  cursor: pointer;
+  display: inline-block;
+}
+.button-three {
+  background-color: var(--color-black);
+  height: 60px;
+  width: 60px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 30px;
+  border: 1px solid var(--color-black);
+  margin: 10px 5px;
+  cursor: pointer;
+  display: inline-block;
+}
+.button-group {
+  display: flex;
+}
+
+.card {
+  background-color: var(--color-white);
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0px 30px 100px 0px rgba(17, 23, 41, 0.1);
+  width: min-content;
+  margin: 10px 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.card .img-container {
+  width: 336px;
+  height: 152px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+}
+.card .tags {
+  width: 336px;
+  overflow: hidden;
+  position: relative;
+}
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+  width: fit-content;
+  display: flex;
+  gap: 0.5em;
+}
+.card .tags::after {
+  height: 100%;
+  width: 25%;
+  background-image: linear-gradient(
+    -90deg,
+    var(--color-white) 50%,
+    transparent
+  );
+  content: "";
+  position: absolute;
+  right: -38px;
+  top: 0;
+  z-index: 5;
+}
+.card ul::-webkit-scrollbar {
+  display: none;
+}
+.card ul li {
+  padding: 4px 16px;
+  background-color: rgba(136, 58, 225, 0.25);
+  border-radius: 16px;
+  width: fit-content;
+  color: var(--color-primary);
+  font-size: 0.625rem;
+  font-weight: 700;
+}
+.card h1 {
+  font-size: 1.125rem;
+  margin-bottom: 6px;
+  font-weight: 700;
+  color: var(--color-black);
+}
+.card p {
+  font-size: 0.875rem;
+  font-weight: 300;
+  margin: 0;
+  line-height: 1.5em;
+  color: #6c727f;
+  position: relative;
+}
+.card p:last-child {
+  margin-top: 20px;
+  padding-top: 20px;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.card p:last-child::before {
+  content: "";
+  width: calc(100% + 32px);
+  height: 1px;
+  background-color: var(--color-black);
+  position: absolute;
+  top: -1px;
+  left: -16px;
+  opacity: 0.1;
+}
+.card hr {
+  opacity: 0.1;
+  border-color: var(--color-black);
+  position: absolute;
+}
