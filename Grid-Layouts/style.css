@@ -1,0 +1,50 @@
+/* Grid Container  */
+.grid-container {
+  width: 95vw;
+  height: 80vh;
+  margin: 0 auto;
+  background-color: whitesmoke;
+  outline: 4px solid slateblue;
+
+  /* Grid */
+  display: grid;
+
+  /* Grid Columns ➡️ */
+  /* Define the number of columns (fixed width sizes in pixels) 👇🏼 */
+  /* grid-template-columns: 200px 200px 200px; Defined 3 columns */
+
+  /* Whenever we want to fill up undefined extra space we defined 👇🏼*/
+  /* Set 4 columns with last column set to auto */
+  /* grid-template-columns: 200px 200px 200px auto; */
+
+  /* we can also defined in percentage value 👇🏼*/
+  /* grid-template-columns: 10% 70% 20%; */
+
+  /* css grid also comes packed with some special functions and keywords */
+  /* when we want equal columns or rolls the preferred unit to use on our grid container is a new unit which is the fractional unit the fractional unit takes a fraction of the available space and divides it equally */
+
+  /* we have three equal width columns of one fr 👇🏼*/
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
+
+  /* when we're using the same value as we are here we can use the repeat function 👇🏼*/
+  /* repeat function take 2 values repeat(numberOfColumns, sizeOfColumns)*/
+  /* grid-template-columns: repeat(2, 1fr); */
+
+  /* Another special function we have access to is the min max function now this is really helpful enables us to specify a minimum value and a maximum value that we want our column to have */
+
+  /* 1 column set to 1fr the 2 column take min value and max value 👇🏼*/
+  /* grid-template-columns: 1fr minmax(320px, 1fr); */
+
+  /* we've also got this extra space here let's say we wanted to fill the space in with 300 pixel columns as long as we had the space and as long as we had the items to fill them in we can do that by using another special value that we have in css grid which is the auto fill value 👇🏼*/
+
+  /* So autofill keep adding the extra space with 300px if available even if there no elements */
+  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+
+  /* No additional columns or extra space get created like autofill does 👇🏼*/
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+
+  /* Naming our grid lines whether it's our column lines or our roll lines will become useful when it comes to moving our items around within our group container and that's done using a grid item property */
+
+  /* Name the grid line with squareBrackets [] 👇🏼*/
+  /* grid-template-columns: [col-start] 1fr [col-2] 1fr [col-3] 1fr [col-end] 1fr; */
+}
