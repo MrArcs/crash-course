@@ -46,5 +46,93 @@
   /* Naming our grid lines whether it's our column lines or our roll lines will become useful when it comes to moving our items around within our group container and that's done using a grid item property */
 
   /* Name the grid line with squareBrackets [] 👇🏼*/
-  /* grid-template-columns: [col-start] 1fr [col-2] 1fr [col-3] 1fr [col-end] 1fr; */
+  grid-template-columns: [col-start] 1fr [col-2] 1fr [col-3] 1fr [col-end] 1fr;
+
+  /* Rows ↓ */
+  /* grid-template-rows: 100px 50px; so we've explicitly defined a 100 pixel row and a 50 pixel row and so any subsequent roles will be implicitly defined these are known as implicit grid tracks */
+
+  /* if we want to learn which are grid auto columns and grid auto rows */
+  /* grid-auto-columns: ; */
+  /* grid-auto-rows: 50px;  Implicit grid columns and rows */
+
+  /* we also have grid auto flow and this works in a similar way to grid auto columns and roles in that it's all about how things are automatically placed inside our grid container */
+
+  grid-template-columns: repeat(12, 1fr);
+
+  /* Default value set to row. Basically means is whenever we have any new items inside a container place these items inside a container according to the row. 👇🏼*/
+  /* grid-auto-flow: row; */
+
+  /* Items are being placed inside the container according to the column 👇🏼*/
+  /* grid-auto-flow: column; */
+
+  /*  Item b has now moved to fill in this extra space that we had even though in our source order item b is placed after item */
+
+  /* use with CAUTION because it will change the visual order of your items */
+  /* grid-auto-flow: dense; */
+
+  /* We can also define row-dense and column-dense to give us a bit more control as to how these items */
+  /* grid-auto-flow: row-dense; */
+
+  /* Set gaps in between our items */
+  /* grid-template-columns: repeat(6, 1fr); */
+  /* grid-column-gap: 10px;
+  grid-row-gap: 10px; */
+
+  /* Short hand for grid-column-gap and grid-row-gap */
+  /* grid-gap: 10px; */
+
+  /* Position Items with in the cell*/
+
+  /* Align items positions our items vertically within the grid cell so by default this is set to stretch but we can change this to [start][center][end]  default set to = [stretch]*/
+  /* grid-template-columns: repeat(3, 150px); */
+  /* align-items: stretch; */
+  /* align-items: end; */
+
+  /* Justify items does the same thing but instead this is along the x-axis or horizontally [start][center][end] default set to = [stretch]*/
+  /* justify-items: end; */
+
+  /* Short hand for align-items and justify-items  */
+  /* place-items: center; */
+  /* place-items: center start; */
+
+  /* Position Content with in the cell*/
+  /* Position our entire content within the container we use align content justify content and place content */
+
+  /* Align content is all about how we align our content vertically within our container and default set to = [start] and other properties are start - end - center - space-between - space-around - space-evenly*/
+  /* align-content: center; */
+
+  /* set content to horizontally default set to = [start] and other properties are start - end - center - space-between - space-around - space-evenly */
+  /* justify-content: space-evenly; */
+
+  /* Short hand for align-content and justify-content  */
+  /* grid-template-columns: repeat(3, 150px); */
+  /* place-content: center; */
+
+  /* For grid template area */
+
+  grid-template-columns: [col-start] 1fr [col-2] 1fr [col-3] 1fr [col-end];
+  grid-auto-rows: 60px auto 100px;
+  grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "sidebar footer footer";
 }
+
+.header {
+  grid-area: header;
+}
+.main {
+  grid-area: main;
+}
+.sidebar {
+  grid-area: sidebar;
+}
+.footer {
+  grid-area: footer;
+}
+
+/* For grid-auto-flow-dense */
+/* .a {
+  /* items a and b have been pushed over column line 10 and column line 11 */
+/* grid-column: 10/11; */
+/* } * */
