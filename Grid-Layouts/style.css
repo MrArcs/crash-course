@@ -110,6 +110,47 @@
 
   /* For grid template area */
 
+  /* grid-template-columns: [col-start] 1fr [col-2] 1fr [col-3] 1fr [col-end];
+  grid-auto-rows: 60px auto 100px;
+  grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "sidebar footer footer"; */
+
+  /* Grid Template */
+
+  /* grid template is a shorthand property for setting grid template rows grid template columns and grid template areas in a single declaration  */
+
+  grid-template:
+    "header header header" 60px
+    "main main sidebar" auto
+    "footer footer footer" 100px /
+    [col-start] 1fr [col-2] 1fr [col-3] 1fr [col-end];
+
+  /* Grid */
+
+  /* explicit values or grid auto roles */
+  grid-template-rows: 50px 200px;
+  grid-template-columns: repeat(3, 1fr);
+
+  /* implicit values */
+  grid-auto-rows: 100px;
+  grid-auto-flow: row;
+
+  /* grid is a shorthand property for setting either grid template roles and grid template columns */
+
+  /* first thing to know is that we can only specify one or the other in this shorthand we can only declare either our explicit values or our implicit values */
+
+  /* This is explicit values */
+  /* grid: rows / columns; 
+        50px 200px / repeat(3, 1fr)  */
+
+  /* This is implicit values */
+  /* grid: rows      / columns;
+        auto-flow  repeat(3, 1fr)  */
+
+  /* Grid container properties ends */
+
   grid-template-columns: [col-start] 1fr [col-2] 1fr [col-3] 1fr [col-end];
   grid-auto-rows: 60px auto 100px;
   grid-template-areas:
@@ -136,3 +177,29 @@
   /* items a and b have been pushed over column line 10 and column line 11 */
 /* grid-column: 10/11; */
 /* } * */
+
+/* Grid item */
+
+.one {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-column-end: -1;
+}
+
+/* we can also define name */
+.one {
+  grid-column-start: col-start;
+  grid-column-end: col-3;
+}
+
+/* we can also span */
+.one {
+  grid-column-start: col-start;
+  grid-column-end: span 2;
+}
+
+/* we can also span */
+.two {
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
