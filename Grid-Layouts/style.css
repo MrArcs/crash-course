@@ -57,8 +57,6 @@
 
   /* we also have grid auto flow and this works in a similar way to grid auto columns and roles in that it's all about how things are automatically placed inside our grid container */
 
-  grid-template-columns: repeat(12, 1fr);
-
   /* Default value set to row. Basically means is whenever we have any new items inside a container place these items inside a container according to the row. 👇🏼*/
   /* grid-auto-flow: row; */
 
@@ -117,37 +115,39 @@
     "sidebar main main"
     "sidebar footer footer"; */
 
+  /* 10th May */
+
   /* Grid Template */
 
   /* grid template is a shorthand property for setting grid template rows grid template columns and grid template areas in a single declaration  */
 
-  grid-template:
+  /* grid-template:
     "header header header" 60px
     "main main sidebar" auto
     "footer footer footer" 100px /
-    [col-start] 1fr [col-2] 1fr [col-3] 1fr [col-end];
+    [col-start] 1fr [col-2] 1fr [col-3] 1fr [col-end]; */
 
   /* Grid */
 
   /* explicit values or grid auto roles */
-  grid-template-rows: 50px 200px;
-  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: 50px 200px;
+  grid-template-columns: repeat(3, 1fr); */
 
   /* implicit values */
-  grid-auto-rows: 100px;
-  grid-auto-flow: row;
+  /* grid-auto-rows: 100px;
+  grid-auto-flow: row; */
 
   /* grid is a shorthand property for setting either grid template roles and grid template columns */
 
   /* first thing to know is that we can only specify one or the other in this shorthand we can only declare either our explicit values or our implicit values */
 
   /* This is explicit values */
-  /* grid: rows / columns; 
-        50px 200px / repeat(3, 1fr)  */
+  /* grid: rows / columns; */
+  /* grid: 50px 200px / repeat(3, 1fr); */
 
   /* This is implicit values */
-  /* grid: rows      / columns;
-        auto-flow  repeat(3, 1fr)  */
+  /* grid: rows / columns;  */
+  /* grid: auto-flow 100px / repeat(3, 1fr); */
 
   /* Grid container properties ends */
 
@@ -172,34 +172,56 @@
   grid-area: footer;
 }
 
-/* For grid-auto-flow-dense */
-/* .a {
-  /* items a and b have been pushed over column line 10 and column line 11 */
-/* grid-column: 10/11; */
-/* } * */
-
 /* Grid item */
-
 .one {
+  background-color: blueviolet;
+}
+/* .one {
   grid-column-start: 1;
-  grid-column-end: 4;
   grid-column-end: -1;
-}
+  /* grid-column-end: -1; 
+} */
 
-/* we can also define name */
+/* we can also span keyword*/
 .one {
-  grid-column-start: col-start;
-  grid-column-end: col-3;
+  /* grid-column-start: col-start;
+  grid-column-end: span 4; */
+
+  /* we can also specify names as well */
+  /* grid-column-end: span col-end; */
+
+  /* we have short hand property */
+  grid-column: col-start / span col-3;
 }
 
-/* we can also span */
-.one {
-  grid-column-start: col-start;
-  grid-column-end: span 2;
+.two {
+  background-color: blue;
 }
-
 /* we can also span */
 .two {
-  grid-row-start: 2;
-  grid-row-end: 3;
+  /* grid-row-start: 2;
+  grid-row-end: 3; */
+
+  /* shorthand  */
+  grid-row: 2 / 4;
+}
+
+/* self property */
+/* we use the word self anywhere within its own cell */
+.five {
+  /* Put the item around the center */
+  align-self: start; /* Put the item at the start */
+  align-self: end; /* Put the item at the end */
+  align-self: self-start; /* Align the item flush at the start */
+  align-self: self-end; /* Align the item flush at the end */
+  align-self: flex-start; /* Put the flex item at the start */
+  align-self: flex-end; /* Put the flex item at the end */
+
+  justify-self: center; /* Pack item around the center */
+  justify-self: start; /* Pack item from the start */
+  justify-self: end; /* Pack item from the end */
+  justify-self: left; /* Pack item from the left */
+  justify-self: right; /* Pack item from the right */
+
+  place-self: center; /* Shorthand for align-self and justify-self */
 }
